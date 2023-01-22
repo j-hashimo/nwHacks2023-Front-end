@@ -47,7 +47,7 @@ function LoginForm() {
           value={password} onChange={(e) => setPassword(e.target.value)}
         />
         <label htmlFor='LoginButton' className='LoginFormText'> Press the button below to log in </label>
-        <input type='submit' className='LoginButton' />
+        <button type='submit' className='LoginButton' >Login</button>
       </form>
     </>
   )
