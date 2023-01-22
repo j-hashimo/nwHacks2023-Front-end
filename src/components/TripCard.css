@@ -7,8 +7,10 @@
     border: 10px;
     border-color: black;
     border-style: ridge;
+    margin: 50px 110px 50px 110px;
 }
 
 .TripCardInfo {
     margin: 20px 10px 20px 10px;
+    font-size: 30px;
 }

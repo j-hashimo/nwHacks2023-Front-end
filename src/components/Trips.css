@@ -11,3 +11,8 @@
     border-width: 5px;
     border-style: ridge;
 }
+
+.Trips {
+    background-color: cadetblue;
+    min-height: 100vh;
+}

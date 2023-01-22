@@ -5,7 +5,8 @@ function TripPanel(props) {
     e.preventDefault();
   }
   return (
-    <form className='TripPanel' onSubmit={handleSubmit}>
+    <div className='TripPanelContainer'>
+      <form className='TripPanel' onSubmit={handleSubmit}>
         <h1 className='TripPanelTitle'>Departure time:</h1>
         <h2 className='TripPanelText'>{props.departTime}</h2>
         <h1 className='TripPanelTitle'>Gathering location:</h1>
@@ -16,7 +17,8 @@ function TripPanel(props) {
         <h2 className='TripPanelText'>{props.tripDescription}</h2>
         <label htmlFor='TripRegistrationButton'> Press the button below to join the trip! </label>
         <input type="submit" id='TripRegistrationButton'/>
-    </form>
+      </form>
+    </div>
   )
 }
 

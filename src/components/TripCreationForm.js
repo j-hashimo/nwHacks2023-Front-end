@@ -12,7 +12,7 @@ function TripCreationForm() {
   }
   return (
     <div>
-        <form className='TripCreationForm' onSubmit={handleSubmit}>
+        <form className='TripCreationForm' onSubmit={handleSubmit} >
             <h1> When are you departing? </h1>
             <label htmlFor='departTime'></label>
             <input type="datetime-local" id='departTime' value={departTime} onChange={(e) => setDepartTime(e.target.value)}/>

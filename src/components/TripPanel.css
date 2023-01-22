@@ -1,7 +1,13 @@
+.TripPanelContainer {
+    background-color: cadetblue;
+    min-height: 100vh;
+}   
+
 .TripPanel {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 #TripRegistrationButton {
