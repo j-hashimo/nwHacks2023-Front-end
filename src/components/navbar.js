@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [navBar, setNavBar] = useState(false);
@@ -9,12 +10,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between text-white items-center h-24 w-full mx-auto px-4 shadow-md sticky top-0 bg-gradient-to-r from-green-500 to-green-600 border-b border-gray-300">
+    <div className="flex justify-between text-white items-center h-24 w-full mx-auto px-4 shadow-md sticky top-0 bg-gradient-to-r from-green-500 to-green-600 border-b border-gray-300 z-50">
       <h1>Image</h1>
       <h1>CarpoolPal</h1>
 
       <ul className="hidden md:flex justify-center text-center">
-        <li className="px-4 cursor-pointer">Find Events</li>
+        <Link to="/events">
+          <li className="px-4 cursor-pointer">Find Events</li>
+        </Link>
         <li className="px-4 cursor-pointer">Find Rides</li>
       </ul>
       <div className="hidden md:flex justify-center text-center">
@@ -37,7 +40,9 @@ const Navbar = () => {
         }
       >
         <ul>
-          <li className="px-4 py-4 cursor-pointer border-b">Find Events</li>
+          <Link to="/events">
+            <li className="px-4 py-4 cursor-pointer border-b">Find Events</li>
+          </Link>
           <li className="px-4 py-4 cursor-pointer border-b">Find Rides</li>
           <li className="px-4 py-4 cursor-pointer border-b">Log In</li>
           <li className="px-4 py-4 cursor-pointer border-b">Sign Up</li>
