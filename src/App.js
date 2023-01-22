@@ -13,7 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/signupform" element={<SignUpForm />} />{" "}
+        {/*path needs to be signupform */}
         <Route path="/add" element={<EventCreation />} />
         <Route path="/TripCreation" element={<TripCreation />} />
       </Routes>
