@@ -1,0 +1,16 @@
+.event-card {
+    border-style: solid;
+    border-color:cornsilk;
+    border-width: 10px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background-color:cornflowerblue;
+    width: 300px;
+    border-radius: 20px;
+}
+
+/* .EventCardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, mimax(0, 1fr));
+} */

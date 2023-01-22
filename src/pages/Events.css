@@ -1,0 +1,11 @@
+.container {
+    background-color:cadetblue;
+    padding: 1rem 3rem;
+    min-height: 100vh;
+}
+
+.events-box { 
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
