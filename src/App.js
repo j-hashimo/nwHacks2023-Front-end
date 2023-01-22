@@ -8,6 +8,7 @@ import SignUpForm from "./components/SignUpForm";
 import TripCreation from "./pages/TripCreation";
 import LoginForm from "./components/LoginForm";
 import Trips from "./components/Trips";
+import TripPanel from "./components/TripPanel";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id/trips" element={<Trips />} />
-        <Route path="/events/:id/trips/:id" element={<Trips />} />
+        <Route path="/events/:id/trips/:id" element={<TripPanel />} />
         
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/add" element={<EventCreation />} />
