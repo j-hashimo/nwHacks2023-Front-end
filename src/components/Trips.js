@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import TripCard from './TripCard'
 import "./Trips.css"
-<<<<<<< HEAD
+
 import {useParams, Link} from 'react-router-dom'
 import axios from 'axios'
-=======
-import { Link } from "react-router-dom"
->>>>>>> 8314b6601e23b4f24d6281ade0407ca52f93bfd1
 
 function Trips() {
   let { eventId } = useParams();

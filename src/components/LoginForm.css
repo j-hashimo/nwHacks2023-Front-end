@@ -1,5 +1,7 @@
 .LoginForm {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 250px 150px 250px 150px;
+    border: 25px;
 }
