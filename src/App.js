@@ -8,12 +8,8 @@ import SignUpForm from "./components/SignUpForm";
 import TripCreation from "./pages/TripCreation";
 import LoginForm from "./components/LoginForm";
 import Trips from "./components/Trips";
-<<<<<<< HEAD
-import { useSelector } from "react-redux";
 
-=======
-import TripPanel from "./components/TripPanel";
->>>>>>> 8314b6601e23b4f24d6281ade0407ca52f93bfd1
+import { useSelector } from "react-redux";
 
 function App() {
 
