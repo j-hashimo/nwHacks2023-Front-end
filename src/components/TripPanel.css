@@ -17,3 +17,16 @@
     border-width: 5px;
     border-style: ridge;
 }
+
+
+.tripPanel-box > div:not(.btn-box) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+}
+
+.btn-box {
+    grid-column: 1/-1;
+    text-align: left;
+    margin-top: 4rem;
+}

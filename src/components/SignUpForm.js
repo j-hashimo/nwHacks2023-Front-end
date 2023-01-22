@@ -40,8 +40,8 @@ function SignUpForm() {
           <input
             className="border border-gray-400 p-2 rounded-md w-full"
             type="text"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
           />
         </label>
       </div>

@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./LoginForm.css";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout } from "../redux/useSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const { error, isLoading, user, isAuthenticated } = useSelector(
     (state) => state.auth
@@ -24,6 +27,8 @@ function LoginForm() {
     e.preventDefault();
 
     dispatch(login({ email, password }));
+    alert("Login Successful");
+    navigate("/");
   };
 
   const checkFun = () => {

@@ -33,7 +33,7 @@ function Trips() {
         <ul className='TripList'>
             <li>
               {trips.length > 0 ? trips.map((trip, index) => {
-                return <Link to="/events/$(eventId)/trips/index">
+                return <Link to={`/events/${eventId}/trips/${trip.id}`}>
                   <TripCard key={index} organizerName={trip.name} departTime={trip.departTime} departLocation={trip.departLocation} slot={trip.emptySlots} />
                 </Link>
                                 
