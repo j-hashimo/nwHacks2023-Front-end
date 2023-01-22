@@ -31,7 +31,7 @@ function App() {
                 element={<TripCreation />}
               />
             </Route>
-            <Route path="/events/:id/trips/:id" element={<TripPanel />} />
+            <Route path="/events/:eventId/trips/:tripId" element={<TripPanel />} />
             {/* <Route path="/events/:id/trips" element={<Trips />} /> */}
 
             <Route path="/add" element={<EventCreation />} />

@@ -61,7 +61,7 @@ export const signup = (email, password) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: "signupFailure",
-            payload: error,
+            payload: error.message,
         });
 
     }
