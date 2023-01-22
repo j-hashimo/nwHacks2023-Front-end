@@ -1,13 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import { useDispatch, useSelector } from "react-redux";
+import { signup } from "../redux/action";
 
 function SignUpForm() {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
+  const { error, isLoading } = useSelector((state) => state.auth);
+
+  const dispatch = useDispatch();
+
+  const loginHandler = () => {
+
+  };
+
+  useEffect(() => {
+    if (error) {
+      alert(error);
+      dispatch({ type: "clearError" });
+    }
+  }, [error, dispatch]);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Username: ", username);
-    console.log("Password: ", password);
+
+    dispatch(signup(email, password))
+    // try {
+
+
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (
@@ -16,8 +40,8 @@ function SignUpForm() {
         Email/Username:
         <input
           type="text"
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
         />
       </label>
       <br />
