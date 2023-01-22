@@ -2,7 +2,7 @@ import React from "react";
 import car2 from "../images/Car2.jpg";
 function Analytics() {
   return (
-    <div className="w-full bg-green-700 py-16 px-4">
+    <div className="w-full bg-green-700 py-16 px-4 mb-1">
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
         <img
           src={car2}

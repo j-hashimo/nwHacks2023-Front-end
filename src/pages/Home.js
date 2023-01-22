@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero.js";
 import Navbar from "../components/navbar";
 import Analytics from "../components/Analytics";
+import SignUp from "../components/SignUp";
+
 function Home() {
   return (
     <div>
@@ -10,6 +12,7 @@ function Home() {
 
       <Hero />
       <Analytics />
+      <SignUp />
     </div>
   );
 }

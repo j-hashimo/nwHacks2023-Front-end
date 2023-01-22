@@ -4,7 +4,7 @@ import "../App.css";
 
 function Hero() {
   return (
-    <div className="my-10 bg-image bg-cover  py-40 px-5">
+    <div className="my-1 bg-image bg-cover  py-40 px-5">
       <div className="flex flex-col text-white drop-shadow-xl ">
         <h1 className="text-4xl text-white font-semibold ">
           Ride together. Make memories.
