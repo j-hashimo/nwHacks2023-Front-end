@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import "./LoginForm.css"
 import { useDispatch, useSelector } from "react-redux";
-import { login, logout } from "../redux/action";
+import { login, logout } from "../redux/useSlice";
 
 function LoginForm() {
   const [email, setEmail] = useState('')
@@ -21,7 +21,7 @@ function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(login(email, password))
+    dispatch(login({email, password}))
 
   }
 

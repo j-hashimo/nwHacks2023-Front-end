@@ -1,13 +1,25 @@
 import React, {useState} from 'react'
 import "./EventCreationForm.css"
+import axios from 'axios'
+
+
 function EventCreationForm() {
   const [ EventName, setEventName ] = useState("")
   const [ EventTime, setEventTime ] = useState("")
   const [ EventLocation, setEventLocation ] = useState("")
   const [ EventDescription, setEventDescription ] = useState("")
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
+    const response = await axios.post('http://localhost:8080/api/events/add', {
+      name: EventName,
+      time: EventTime,
+      location: EventLocation,
+      description: EventDescription,
+      userId: JSON.parse(localStorage.getItem('user')).userId 
+    })
+    console.log(response)
+
   }
   return (
     <div >

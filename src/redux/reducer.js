@@ -61,5 +61,29 @@ export const authReducer = createReducer({}, {
         state.loading = false;
         state.isAuthenticated = true;
         state.error = action.payload;
-    }
+    },
+
+    tutorialRequest: (state) => {
+        state.loading = true;
+    },
+    tutorialSuccess: (state, action) => {
+        state.loading = false;
+        state.user = action.payload.user;
+        state.tutorial = false;
+    },
+    tutorialFailure: (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+    },
+
+    clearError: (state) => {
+        state.error = null;
+    },
+    clearMessage: (state) => {
+        state.message = null;
+    },
+
+    keepAuth: (state, action) => {
+
+    },
 })
