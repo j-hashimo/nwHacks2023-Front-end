@@ -28,7 +28,7 @@ function Events() {
       <h1>Events</h1>
       <div>
         <Link to="/add">create an event</Link>
-      </div>
+      </div>/
       <div className="events-box">
         {events.length > 0
           ? events.map((event, index) => {

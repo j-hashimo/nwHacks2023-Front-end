@@ -33,7 +33,10 @@ function Trips() {
         <ul className='TripList'>
             <li>
               {trips.length > 0 ? trips.map((trip, index) => {
-                return <TripCard key={index} organizerName={trip.name} departTime={trip.departTime} departLocation={trip.departLocation} slot={trip.emptySlots} />
+                return <Link to="/events/$(eventId)/trips/index">
+                  <TripCard key={index} organizerName={trip.name} departTime={trip.departTime} departLocation={trip.departLocation} slot={trip.emptySlots} />
+                </Link>
+                                
               }): null}
                 {/* <TripCard organizerName={"Frodo Baggins"} departTime={"2023-10-21"} departLocation={"Hobbiton"} slot={"8"} />
                 <TripCard organizerName={"John Wick"} departTime={"2023-3-22"} departLocation={"Some where in NewYork"} slot={"0"} /> */}

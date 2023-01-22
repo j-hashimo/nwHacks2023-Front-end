@@ -8,8 +8,8 @@ import SignUpForm from "./components/SignUpForm";
 import TripCreation from "./pages/TripCreation";
 import LoginForm from "./components/LoginForm";
 import Trips from "./components/Trips";
-
 import { useSelector } from "react-redux";
+import TripPanel from "./components/TripPanel";
 
 function App() {
   const { user } = useSelector((state) => state.auth);
@@ -31,7 +31,7 @@ function App() {
                 element={<TripCreation />}
               />
             </Route>
-            <Route path="/events/:id/trips/:id" element={<Trips />} />
+            <Route path="/events/:id/trips/:id" element={<TripPanel />} />
             {/* <Route path="/events/:id/trips" element={<Trips />} /> */}
 
             <Route path="/add" element={<EventCreation />} />
