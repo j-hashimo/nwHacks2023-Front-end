@@ -29,7 +29,7 @@ function Events() {
       <h1>Events</h1>
       <div>
         <Link to="/add">create an event</Link>
-      </div>
+      </div>/
       <div className="events-box">
       {events.length > 0 ? events.map((event, index) => {
         return <EventCard key={index} eventName={event.name} eventTime={event.time} eventLocation={event.location} image={'https://picsum.photos/200/300'} eventId={event.id} />
