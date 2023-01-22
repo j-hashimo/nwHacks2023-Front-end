@@ -6,6 +6,7 @@ import EventCreation from "./pages/EventCreation.js";
 import { Routes, Route, Link } from "react-router-dom";
 import SignUpForm from "./components/SignUpForm";
 import TripCreation from "./pages/TripCreation";
+import LoginForm from "./components/LoginForm";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/add" element={<EventCreation />} />
         <Route path="/TripCreation" element={<TripCreation />} />
+        <Route path="/Login" element={<LoginForm />} />
       </Routes>
     </div>
   );
