@@ -22,7 +22,9 @@ const Navbar = () => {
       </ul>
       <div className="hidden md:flex justify-center text-center">
         <h1 className="px-4 cursor-pointer">Log In</h1>
-        <h1 className="px-4 cursor-pointer">Sign Up</h1>
+        <Link to="/signupform">
+          <h1 className="px-4 cursor-pointer">Sign Up</h1>
+        </Link>
       </div>
 
       <div onClick={handleNavBar} className="block md:hidden">
@@ -45,7 +47,9 @@ const Navbar = () => {
           </Link>
           <li className="px-4 py-4 cursor-pointer border-b">Find Rides</li>
           <li className="px-4 py-4 cursor-pointer border-b">Log In</li>
-          <li className="px-4 py-4 cursor-pointer border-b">Sign Up</li>
+          <Link to="/signupform">
+            <li className="px-4 py-4 cursor-pointer border-b">Sign Up</li>
+          </Link>
         </ul>
       </div>
     </div>
