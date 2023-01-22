@@ -1,0 +1,17 @@
+#Login {
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    background-color:black;
+}
+
+#SignUp {
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    background-color: darkolivegreen;
+}
+
+#titleMain {
+    font-size: xx-large;
+}

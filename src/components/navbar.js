@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../redux/useSlice";
-
+import "./Navbar.css";
 
 const Navbar = () => {
   const [navBar, setNavBar] = useState(false);
@@ -20,9 +20,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-end text-white items-center h-24 w-full mx-auto px-4 shadow-md sticky top-0 bg-gradient-to-r from-green-500 to-green-600 border-b border-gray-300 z-50">
-
-
+    <div className="flex justify-between text-white items-center h-24 w-full mx-auto px-4 shadow-md sticky top-0 bg-gradient-to-r from-green-500 to-green-600 border-b border-gray-300 z-50">
+      <h1 id="titleMain"> CarPoolPal </h1>
+      
       {user ? (
         <ul className="hidden md:flex justify-center text-center">
           <Link to="/events">
@@ -34,10 +34,10 @@ const Navbar = () => {
       ) : (
         <div className="hidden md:flex justify-center text-center">
           <Link to="/login">
-            <h1 className="px-4 cursor-pointer">Log In</h1>
+            <h1 className="px-4 cursor-pointer" id="Login">Log In</h1>
           </Link>
           <Link to="/signup">
-            <h1 className="px-4 cursor-pointer">Sign Up</h1>
+            <h1 className="px-4 cursor-pointer" id="SignUp">Sign Up</h1>
           </Link>
         </div>
       )}
