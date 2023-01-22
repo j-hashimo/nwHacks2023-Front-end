@@ -6,17 +6,38 @@ import EventCreation from "./pages/EventCreation.js";
 import { Routes, Route, Link } from "react-router-dom";
 import SignUpForm from "./components/SignUpForm";
 import TripCreation from "./pages/TripCreation";
+import LoginForm from "./components/LoginForm";
+import Trips from "./components/Trips";
+
+import { useSelector } from "react-redux";
 
 function App() {
+  const { user } = useSelector((state) => state.auth);
+
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/signupform" element={<SignUpForm />} />{" "}
-        {/*path needs to be signupform */}
-        <Route path="/add" element={<EventCreation />} />
-        <Route path="/TripCreation" element={<TripCreation />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/signup" element={<SignUpForm />} />
+
+        {user ? (
+          <>
+            <Route path="/events">
+              <Route index element={<Events />} />
+              <Route path=":eventId/trips" element={<Trips />} />
+              <Route
+                path="/events/:eventId/trips/add"
+                element={<TripCreation />}
+              />
+            </Route>
+            <Route path="/events/:id/trips/:id" element={<Trips />} />
+            {/* <Route path="/events/:id/trips" element={<Trips />} /> */}
+
+            <Route path="/add" element={<EventCreation />} />
+            <Route path="/TripCreation" element={<TripCreation />} />
+          </>
+        ) : null}
       </Routes>
     </div>
   );

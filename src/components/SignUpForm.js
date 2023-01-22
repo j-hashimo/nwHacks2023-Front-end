@@ -1,13 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { signup } from "../redux/action";
 
 function SignUpForm() {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const { error, isLoading } = useSelector((state) => state.auth);
 
-  const handleSubmit = (event) => {
+  const dispatch = useDispatch();
+
+  const loginHandler = () => {};
+
+  useEffect(() => {
+    if (error) {
+      alert(error);
+      dispatch({ type: "clearError" });
+    }
+  }, [error, dispatch]);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Username: ", username);
-    console.log("Password: ", password);
+
+    dispatch(signup(email, password));
+    // try {
+
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (
@@ -24,6 +45,7 @@ function SignUpForm() {
           />
         </label>
       </div>
+
       <br />
 
       <div className="mb-4">
