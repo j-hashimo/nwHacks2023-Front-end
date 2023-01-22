@@ -2,10 +2,12 @@
     background-color:cadetblue;
     padding: 1rem 3rem;
     min-height: 100vh;
+    min-width: 100vw; /*removed whitespace on the right */
 }
 
 .events-box { 
-    display: flex;
+    
     gap: 1rem;
-    flex-wrap: wrap;
+    display: grid;
+    align-items: center;
 }

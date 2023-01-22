@@ -25,11 +25,16 @@ function Events() {
 
   return (
     <div className="container">
-      <h1>Events</h1>
+      <h1 className="text-white font-semibold text-3xl">Events</h1>
       <div>
-        <Link to="/add">create an event</Link>
-      </div>/
-      <div className="events-box">
+        <Link to="/add">
+          <h1 className="text-white font-semibold text-xl mb-5">
+            Create an event:
+          </h1>
+        </Link>
+      </div>
+
+      <div className="events-box md:grid-cols-2 lg:grid-cols-3 gap-2">
         {events.length > 0
           ? events.map((event, index) => {
               return (
