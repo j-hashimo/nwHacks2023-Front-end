@@ -28,7 +28,7 @@ const Navbar = () => {
           <Link to="/events">
             <li className="px-4 cursor-pointer">Find Events</li>
           </Link>
-          <li className="px-4 cursor-pointer">Find Rides</li>
+          {/* <li className="px-4 cursor-pointer">Find Rides</li> */}
           <li className="px-4 cursor-pointer" onClick={handleLogout}>Logout</li>
         </ul>
       ) : (
