@@ -1,0 +1,6 @@
+.TripCreationForm {
+    padding: 250 150 250 150;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
